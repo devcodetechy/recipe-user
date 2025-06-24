@@ -12,7 +12,7 @@ const Recipesabout = () => {
     const token = localStorage.getItem("authToken");
     if (!hasFetched.current) {
     axios
-      .get(`http://localhost:3001/recipes/${id}`, {
+      .get(`${process.env.REACT_APP_BACKEND_URL}/recipes/${id}`, {
         headers: { Authorization: "Token " + token },
       })
       .then((response) => {

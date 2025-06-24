@@ -12,7 +12,7 @@ const Recipes = () => {
     const token = localStorage.getItem("authToken");
 
     axios
-      .get("http://localhost:3001/recipes", {
+      .get(`${process.env.REACT_APP_BACKEND_URL}/recipes`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
@@ -27,7 +27,7 @@ const Recipes = () => {
     const token = localStorage.getItem("authToken");
 
     try {
-      const response = await axios.get(`http://localhost:3001/recipesearch?search=${searchTerm}`, {
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/recipesearch?search=${searchTerm}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setRecipes(response.data.data);

@@ -18,7 +18,7 @@ const Login = () => {
             email: email,
             password: password,
         }
-        axios.post('http://localhost:3001/userlogin',user)
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/userlogin`,user)
         .then(response=>{
             const token = response.data.token;
             setErrorMessage(''); 

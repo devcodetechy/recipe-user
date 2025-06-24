@@ -20,7 +20,7 @@ const Recipesedit = () => {
     const fetchRecipe = async () => {
       try {
         const token = localStorage.getItem("authToken");
-        const res = await axios.get(`http://localhost:3001/recipes/${id}`, {
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/recipes/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

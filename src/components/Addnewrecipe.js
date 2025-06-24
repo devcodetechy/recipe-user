@@ -33,7 +33,7 @@ const AddNewRecipe = () => {
 
     try {
       const token = localStorage.getItem('authToken');
-      await axios.post('http://localhost:3001/addnewrecipes', formData, {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/addnewrecipes`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
