@@ -33,7 +33,7 @@ const Myrecipes = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/myrecipes/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/myrecipes/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('authToken')}`,
         },
@@ -76,7 +76,7 @@ const Myrecipes = () => {
               >
                 <a href={`/Recipesabout/${recipe.id}`}>
                   <img
-                    src={`http://localhost:3001/${recipe.image}`}
+                    src={`${process.env.REACT_APP_BACKEND_URL}/${recipe.image}`}
                     alt={recipe.title}
                     className="card-img-top"
                     style={{ height: '250px', objectFit: 'cover' }}

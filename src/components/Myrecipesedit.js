@@ -43,7 +43,7 @@ const Recipesedit = () => {
     try {
       const token = localStorage.getItem("authToken");
       await axios.put(
-        `http://localhost:3001/myrecipesedit/${id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/myrecipesedit/${id}`,
         {
           title: recipe.title,
           ingredients: recipe.ingredients,
@@ -86,7 +86,7 @@ const Recipesedit = () => {
         <label>Image:</label><br />
         {recipe.image && (
           <img
-            src={`http://localhost:3001/${recipe.image}`}
+            src={`${process.env.REACT_APP_BACKEND_URL}/${recipe.image}`}
             alt="Recipe"
             style={{ width: "200px", height: "150px", objectFit: "cover" }}
           />
