@@ -86,8 +86,8 @@ const Recipesedit = () => {
         <label>Image:</label><br />
         {recipe.image && (
           <img
-            src={`${process.env.REACT_APP_BACKEND_URL}${recipe.image}`}
-            alt="Recipe"
+            src={recipe.image}
+            alt={recipe.title}
             style={{ width: "200px", height: "150px", objectFit: "cover" }}
           />
         )}
