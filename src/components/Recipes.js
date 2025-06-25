@@ -83,10 +83,18 @@ const Recipes = () => {
                 onClick={() => navigate(`/Recipesabout/${recipe.id}`)}
               >
                 <img
-                  src={`${process.env.REACT_APP_BACKEND_URL}/${recipe.image}`}
+                  src={
+                    recipe.image?.startsWith("http")
+                      ? recipe.image
+                      : `${process.env.REACT_APP_BACKEND_URL}${recipe.image}`
+                  }
                   alt={recipe.title}
                   className="card-img-top"
                   style={{ height: "200px", objectFit: "cover" }}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "/default.jpg"; // optional fallback image
+                  }}
                 />
                 <div className="card-body text-center">
                   <h5 className="card-title">{recipe.title}</h5>

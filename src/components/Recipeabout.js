@@ -36,7 +36,7 @@ const Recipesabout = () => {
               src={
                 recipe.image?.startsWith("http")
                   ? recipe.image
-                  : `${process.env.REACT_APP_BACKEND_URL}/${recipe.image}`
+                  : `${process.env.REACT_APP_BACKEND_URL}${recipe.image}`
               }
               alt={`Image of ${recipe.title}`}
               style={{ height: "200px", objectFit: "cover" }}
