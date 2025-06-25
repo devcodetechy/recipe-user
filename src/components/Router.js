@@ -16,12 +16,12 @@ const Router = createBrowserRouter([
     { path: '/Recipes', element: <Recipes/>},
     { path: '/Passwordreset', element: <Passwordreset/>},
     { path: '/Myrecipes', element: <Myrecipes/>},
-    { path: '/Recipesabout', element: <Recipesabout/>},
     { path: '/Addnewrecipe', element: <Addnewrecipe/>},
-    { path: "/Recipesabout/:id", element: <Recipesabout/>},
-    { path: "/myrecipesedit/:id", element: <Myrecipesedit />}
- 
-
+    { path: "/Recipesabout/:id", element: <Recipesabout/> }, // ✅ move this up
+    { path: "/myrecipesedit/:id", element: <Myrecipesedit />},
+    // optional: remove this unless it's a different view
+    // { path: '/Recipesabout', element: <Recipesabout/>}, 
 ]);
+
 
 export default Router;

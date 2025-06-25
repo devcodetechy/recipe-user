@@ -83,7 +83,7 @@ const Recipes = () => {
                 onClick={() => navigate(`/Recipesabout/${recipe.id}`)}
               >
                 <img
-                  src={recipe.image}
+                  src={`${process.env.REACT_APP_BACKEND_URL}${recipe.image}`}
                   alt={recipe.title}
                   className="card-img-top"
                   style={{ height: "200px", objectFit: "cover" }}

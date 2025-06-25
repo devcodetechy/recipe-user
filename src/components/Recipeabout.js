@@ -33,7 +33,7 @@ const Recipesabout = () => {
             <h2 className="text-center shadow-heading">{recipe.title}</h2>
             <img
               className="ml-5 mt-3"
-              src={recipe.image}
+              src={`${process.env.REACT_APP_BACKEND_URL}${recipe.image}`}
               alt={`Image of ${recipe.title}`}
               style={{ height: "200px", objectFit: "cover" }}
             />
