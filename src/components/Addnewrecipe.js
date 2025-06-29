@@ -26,10 +26,12 @@ const AddNewRecipe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-
     for (let key in recipe) {
-      formData.append(key, recipe[key]);
+      if (recipe[key] !== null) {
+        formData.append(key, recipe[key]);
+      }
     }
+
 
     try {
       const token = localStorage.getItem('authToken');

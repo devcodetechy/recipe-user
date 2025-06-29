@@ -76,7 +76,7 @@ const Myrecipes = () => {
               >
                 <a href={`/Recipesabout/${recipe.id}`}>
                   <img
-                    src={`${process.env.REACT_APP_BACKEND_URL}${recipe.image}`} 
+                    src={recipe.image}
                     alt={recipe.title}
                     className="card-img-top"
                     style={{ height: '250px', objectFit: 'cover' }}
