@@ -25,6 +25,7 @@ const AddNewRecipe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     const formData = new FormData();
     for (let key in recipe) {
       if (recipe[key] !== null) {
