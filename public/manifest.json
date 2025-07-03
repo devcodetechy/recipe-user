@@ -5,16 +5,16 @@
     {
       "src": "https://res.cloudinary.com/dks0xmmcz/image/upload/v1751519914/Recipe_icon_za4cj1.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/jpg"
     },
     {
       "src": "https://res.cloudinary.com/dks0xmmcz/image/upload/v1751519914/Recipe_icon_za4cj1.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
       "src": "https://res.cloudinary.com/dks0xmmcz/image/upload/v1751519914/Recipe_icon_za4cj1.jpg",
-      "type": "image/png",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],
